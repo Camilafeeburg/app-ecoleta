@@ -30,6 +30,11 @@ input {
   border-radius: 6px;
   border: 1px solid #aaa;
 }
+button{
+  background-color: green;
+  width: 100px;
+  height: 30px;
+}
 
   .base,
   .framework,

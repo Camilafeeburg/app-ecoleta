@@ -27,7 +27,7 @@ function App() {
               value={peso}
               onChange={(e) => setPeso(e.target.value)}
             />
-
+            <button>Calcular</button>
           </div>
 
         </div>

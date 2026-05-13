@@ -44,12 +44,14 @@ function App() {
            Calcular
          </button>
 
-         <h2> Seu resultado é: {imc}</h2>
+         <p> Seu resultado é: {imc}</p>
 
           </div>
 
         </div>
-
+      <div className="tabela">
+         
+      </div>
       </section>
     </>
   )

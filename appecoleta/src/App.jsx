@@ -5,10 +5,10 @@ import './App.css'
 
 function App() {
     const [tela, setDisplay] = useState('0');
-    const [equation, setEquation] = useState('');
+    
   
     const handleClick = (value) => {
-      if (display === '0') {
+      if (tela === '0') {
         setDisplay(value);
       } else {
         setDisplay(tela + value);
@@ -17,14 +17,14 @@ function App() {
   
     const clear = () => {
       setDisplay('0');
-      setEquation('');
+      
     };
   
     const calculate = () => {
       try {
       
         const result = eval(tela).toString();
-        setEquation(tela + ' =');
+        
         setDisplay(result);
       } catch (error) {
         setDisplay('Erro');
@@ -34,7 +34,7 @@ function App() {
   return ( <div className='calculadora'> Calculadora
      
      <div className="tela">
-          <small>{equation}</small>
+          
           <div className="current">{tela}</div>
         </div>
 

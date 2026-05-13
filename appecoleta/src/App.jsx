@@ -2,35 +2,54 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
+
   const [altura, setAltura] = useState("")
   const [peso, setPeso] = useState("")
+  const [imc, setImc] = useState("")
+
+  function calcularIMC() {
+   const resultado = peso / (altura * altura)
+    setImc(resultado.toFixed(2))
+  }
 
   return (
     <>
       <section id="center">
-        <div className="container">
 
-          <h1>Calculadora - React Native & Vite</h1>
+    <div className="container">
 
-          <div className="box"> 
+    <h1>Calculadora IMC</h1>
 
-            <p>Altura(cm)</p>
-            <input
-              type="number"
-              value={altura}
-              onChange={(e) => setAltura(e.target.value)}
+     <div className="box">
+
+     <p>Altura(m)</p>
+
+     <input
+       type="number"
+        value={altura}
+        placeholder='Ex: 1,67'
+        onChange={(e) => setAltura(e.target.value)}
             />
 
-            <p>Peso(kg)</p>
-            <input
-              type="number"
-              value={peso}
-              onChange={(e) => setPeso(e.target.value)}
-            />
-            <button>Calcular</button>
+         <p>Peso(kg)</p>
+
+           <input
+          type="number"
+          value={peso}
+          placeholder='Ex:60'
+           onChange={(e) => setPeso(e.target.value)}
+         />
+
+        <button onClick={calcularIMC}>
+           Calcular
+         </button>
+
+         <h2> Seu resultado é: {imc}</h2>
+
           </div>
 
         </div>
+
       </section>
     </>
   )

@@ -105,7 +105,6 @@ td{
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  flex-shrink: 0;
 }
 
 .azul{
@@ -133,27 +132,22 @@ td{
 }
 
 
-?@media (max-width: 768px){
-
-  .container{
+@media (max-width: 600px) {
+ .container{
     flex-direction: column;
     align-items: center;
   }
-
-  .box,
-  .tabela{
+ .tabela{
     width: 100%;
     max-width: 340px;
   }
 
-  h1{
-    font-size: 24px;
-  }
+h1{
+ font-size: 24px;
+ }
 
-  td,
-  th{
+th{
     font-size: 14px;
     padding: 10px;
   }
-
 }

@@ -65,7 +65,7 @@ function App() {
               <tbody>
 
                 <tr>
-                  <td>Menor que 18,5</td>
+                  <td> Menor 18,5</td>
 
                   <td className="classificacao">
                     Abaixo do peso
